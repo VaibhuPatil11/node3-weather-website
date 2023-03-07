@@ -1,6 +1,10 @@
 // const { response } = require("express");
 
-console.log("client side javascript file is loaded");
+const weatherform=document.querySelector('form')
+const search= document.querySelector('input')
+const messageOne= document.querySelector('#message-1')
+const messageTwo= document.querySelector('#message-2')
+
 
 fetch('localhost:3000/weather?address=boston').then((response)=>{
     response.json().then((data)=>{
@@ -17,10 +21,6 @@ fetch('localhost:3000/weather?address=boston').then((response)=>{
 })
 
 
-const weatherform=document.querySelector('form')
-const search= document.querySelector('input')
-const messageOne= document.querySelector('#message-1')
-const messageTwo= document.querySelector('#message-2')
 
 
 weatherform.addEventListener('submit',(e)=>{
